@@ -3,6 +3,9 @@
 `sahikosql` is an Android application designed for security testing and automated SQL injection vulnerability analysis. Built on Kotlin and Coroutines, the application provides an enterprise-grade interface to crawl Web endpoints, detect SQL injection entry points, and execute chunked payload data extraction.
 
 ---
+### More Details
+
+  https://sahikosql.vercel.app
 
 ## Executive Overview
 
