@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="108" height="108">
+    <!-- Background Shield Badge -->
+    <path fill="#121212" stroke="#FFFFFF" stroke-width="3.5" d="M54,10 L16,28 V58 C16,81 33,100 54,106 C75,100 92,81 92,58 V28 Z" />
+    <!-- Inner Accent Line -->
+    <path fill="none" stroke="#33FFFFFF" stroke-width="1.5" d="M54,16 L22,32 V57 C22,76 36,93 54,98 C72,93 86,76 86,57 V32 Z" />
+    <!-- Letter 'S' -->
+    <path fill="none" stroke="#FFFFFF" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" d="M40,43 H30 C27,43 27,53 30,53 H37 C40,53 40,64 37,64 H27" />
+    <!-- Letter 'Q' -->
+    <path fill="none" stroke="#FFFFFF" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" d="M47,46 C47,43 61,43 61,46 V61 C61,64 47,64 47,61 Z" />
+    <path fill="none" stroke="#FFFFFF" stroke-width="5.5" stroke-linecap="round" d="M56,58 L63,66" />
+    <!-- Letter 'L' -->
+    <path fill="none" stroke="#FFFFFF" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" d="M69,43 V64 H80" />
+</svg>

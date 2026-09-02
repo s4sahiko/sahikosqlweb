@@ -1,0 +1,6 @@
+# Robots.txt for sahikosql Product Website
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://sahiko.pages.dev/sitemap.xml

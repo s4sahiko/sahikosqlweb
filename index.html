@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sahikosql — Automated SQL Injection Scanner & Data Extractor for Android</title>
+  
+  <!-- Google Site Verification -->
+  <meta name="google-site-verification" content="0ukQUm0zM0uZ2BkYFfGYHqyDUi-RmOZIPfh4wuSD1sk" />
+
+  <!-- Primary SEO Meta Tags -->
+  <meta name="description" content="sahikosql is an enterprise-grade Android security application by Sahiko Innovation Lab for automated SQL injection vulnerability analysis, target web crawling, database fingerprinting, and marker-delimited data extraction.">
+  <meta name="keywords" content="sahikosql, sahiko, Sahiko Innovation Lab, sahiko.pages.dev, SQL injection scanner, Android cybersecurity app, vulnerability assessment, penetration testing, database extraction engine, Kotlin security scanner, mobile pentesting tool">
+  <meta name="author" content="Sahiko Innovation Lab (sahiko.pages.dev)">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://sahiko.pages.dev/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sahiko.pages.dev/">
+  <meta property="og:title" content="sahikosql — Enterprise Android SQL Injection Security Suite">
+  <meta property="og:description" content="Automated target crawling, multi-vector SQLi probing, chunked marker extraction, and pitch-black glass interface.">
+  <meta property="og:image" content="https://sahiko.pages.dev/assets/logo.svg">
+  <meta property="og:site_name" content="Sahiko Innovation Lab">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://sahiko.pages.dev/">
+  <meta name="twitter:title" content="sahikosql — Android SQL Injection Scanner & Data Extractor">
+  <meta name="twitter:description" content="Automated target crawling, multi-vector SQLi engine, chunked marker extraction, and pitch-black glass interface by Sahiko Innovation Lab.">
+  <meta name="twitter:image" content="https://sahiko.pages.dev/assets/logo.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="apple-touch-icon" href="assets/logo.svg">
+
+  <!-- JSON-LD Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "sahikosql",
+        "operatingSystem": "Android 7.0+",
+        "applicationCategory": "SecurityApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Sahiko Innovation Lab",
+          "url": "https://sahiko.pages.dev"
+        },
+        "downloadUrl": "https://sahiko.pages.dev/sahikosql-v1.0.0-release.apk",
+        "softwareVersion": "1.0.0",
+        "fileSize": "5.0MB"
+      },
+      {
+        "@type": "Organization",
+        "name": "Sahiko Innovation Lab",
+        "url": "https://sahiko.pages.dev",
+        "logo": "https://sahiko.pages.dev/assets/logo.svg"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="brand-logo">
+        <img src="assets/logo.svg" alt="SAHIKOSQL Logo" class="brand-app-icon">
+        <span class="brand-name">SAHIKOSQL</span>
+      </a>
+
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#simulator">Live Simulator</a></li>
+          <li><a href="#architecture">Engine Specs</a></li>
+          <li><a href="#databases">Databases</a></li>
+          <li><a href="#download">Download</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Mobile Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title text-gradient">Automated SQL Injection Scanner & Data Extractor</h1>
+
+        <p class="hero-subtitle">
+          <strong style="color: #fff;">sahikosql</strong> delivers precision target web crawling, multi-vector SQL injection probing (Union-Based, Error-Based, Boolean-Blind), automated schema discovery, and chunked marker-delimited database extraction in a pitch-black monochrome glassmorphic UI.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="sahikosql-v1.0.0-release.apk" download="sahikosql-v1.0.0-release.apk" class="btn btn-white btn-download-apk" id="heroDownloadBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Download Release Build (.apk)</span>
+          </a>
+
+          <a href="#simulator" class="btn btn-glass">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            <span>Test Simulator</span>
+          </a>
+        </div>
+
+        <div class="hero-specs">
+          <div class="spec-item">
+            <span class="spec-value">API 24+</span>
+            <span class="spec-label">Android 7 - 14</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-value">5 Engines</span>
+            <span class="spec-label">DB Dialects</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-value">5.0 MB</span>
+            <span class="spec-label">Package Size</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-value">100%</span>
+            <span class="spec-label">Local Processing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features Showcase Section -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">CAPABILITIES & ENGINE FEATURES</span>
+        <h2 class="section-title">Designed for Security Auditors & Researchers</h2>
+        <p class="section-desc">
+          Every subsystem in sahikosql is built to automate penetration testing while guaranteeing stability, preventing memory leaks, and managing target request limits.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <article class="glass-card">
+          <div class="feature-tag-box">[WEB_CRAWLER]</div>
+          <h3 class="feature-title">Automated Web Crawler</h3>
+          <p class="feature-desc">
+            Discovers internal endpoints, query parameters, and form submit fields automatically. Parses anchor tags and extracts parameters for immediate vulnerability probing.
+          </p>
+        </article>
+
+        <!-- Feature 2 -->
+        <article class="glass-card">
+          <div class="feature-tag-box">[VULN_ENGINE]</div>
+          <h3 class="feature-title">Multi-Vector Probing Engine</h3>
+          <p class="feature-desc">
+            Scans target endpoints using Union-Based, Error-Based, and Boolean-Blind SQL injection heuristics. Confirms vulnerability points without corrupting target data.
+          </p>
+        </article>
+
+        <!-- Feature 3 -->
+        <article class="glass-card">
+          <div class="feature-tag-box">[FINGERPRINT]</div>
+          <h3 class="feature-title">Database Engine Fingerprinting</h3>
+          <p class="feature-desc">
+            Identifies target database engine signatures including MySQL, PostgreSQL, SQLite, Microsoft SQL Server, and Oracle DB automatically.
+          </p>
+        </article>
+
+        <!-- Feature 4 -->
+        <article class="glass-card">
+          <div class="feature-tag-box">[CHUNKED_STREAM]</div>
+          <h3 class="feature-title">Marker-Delimited Extraction</h3>
+          <p class="feature-desc">
+            Employs marker delimiters (<code class="font-mono text-white">[SQLI_START]</code> / <code class="font-mono text-white">[SQLI_END]</code>) with GROUP_CONCAT and LIMIT/OFFSET pagination to extract database records safely.
+          </p>
+        </article>
+
+        <!-- Feature 5 -->
+        <article class="glass-card">
+          <div class="feature-tag-box">[MATRIX_VIEW]</div>
+          <h3 class="feature-title">Full-Screen Matrix Table Viewer</h3>
+          <p class="feature-desc">
+            Displays extracted database tables in a full-screen, dual-axis scrollable layout with cell inspection, selectable text, and horizontal scrolling for wide schemas.
+          </p>
+        </article>
+
+        <!-- Feature 6 -->
+        <article class="glass-card">
+          <div class="feature-tag-box">[HUD_TERMINAL]</div>
+          <h3 class="feature-title">Real-Time Terminal HUD</h3>
+          <p class="feature-desc">
+            Displays real-time scan events, raw payload requests, and system diagnostics with live timestamping and instant <code class="font-mono">Show</code> / <code class="font-mono">Hide</code> toggle controls.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Live Simulator Section -->
+  <section class="section" id="simulator">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">INTERACTIVE DEMO</span>
+        <h2 class="section-title">Test the Scanning & Extraction Engine</h2>
+        <p class="section-desc">
+          Experience how sahikosql detects column counts, fingerprints database backends, and extracts marker-delimited records in real time.
+        </p>
+      </div>
+
+      <div class="simulator-wrapper">
+        <div class="window-header">
+          <div class="window-dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <span class="window-title">sahikosql Terminal HUD & Simulation Workstation</span>
+          <span class="font-mono" style="font-size: 0.75rem; color: var(--text-dim);">STATUS: READY</span>
+        </div>
+
+        <div class="simulator-body">
+          <!-- Control Panel -->
+          <div class="sim-controls">
+            <div class="input-group">
+              <label for="simUrl">TARGET URL OR HOSTNAME</label>
+              <input type="text" id="simUrl" class="sim-input" value="http://vulnerable-shop.local/item.php?id=4">
+            </div>
+
+            <div>
+              <span class="input-group label" style="margin-bottom: 8px; display: block; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">PRESET TARGET AUDIT SCENARIOS</span>
+              <div class="sim-options">
+                <span class="sim-chip active" data-url="http://testphp.vulnweb.com/artists.php?id=1">PHP / MySQL E-Commerce</span>
+                <span class="sim-chip" data-url="http://bank-portal.local/account.php?id=902">PostgreSQL Financial Portal</span>
+                <span class="sim-chip" data-url="http://cms-app.local/post.php?id=77">SQLite Compact App</span>
+              </div>
+            </div>
+
+            <button class="btn btn-white" id="btnSimulate">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              <span>START SIMULATED AUDIT</span>
+            </button>
+          </div>
+
+          <!-- Terminal Screen -->
+          <div class="sim-terminal" id="simTerminal">
+            <div class="log-line"><span class="log-time">[13:25:00]</span> <span class="log-info">[System] sahikosql engine initialized. Ready to accept target URL.</span></div>
+            <div class="log-line"><span class="log-time">[13:25:01]</span> <span class="log-info">[System] Enter target URL and click 'START SIMULATED AUDIT' above.</span></div>
+          </div>
+        </div>
+
+        <!-- Simulated Table Output Matrix -->
+        <div class="matrix-preview" id="simResultMatrix" style="display: none;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Engine Architecture & Payloads -->
+  <section class="section" id="architecture">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">ENGINE ARCHITECTURE</span>
+        <h2 class="section-title">Payload Strategy & Protocol</h2>
+        <p class="section-desc">
+          How sahikosql safely extracts schema information and table rows without breaking web application layouts or overwhelming target servers.
+        </p>
+      </div>
+
+      <div class="arch-grid">
+        <div>
+          <h3 class="font-mono text-white" style="font-size: 1.15rem; margin-bottom: 14px;">1. Column Count Heuristic Probing</h3>
+          <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 0.95rem;">
+            The engine executes a binary search with <code class="font-mono">' ORDER BY N-- -</code> up to N=15. When an HTTP 500 error or SQL exception occurs, it falls back to binary <code class="font-mono">' UNION SELECT 1,2,...N-- -</code> validation.
+          </p>
+
+          <h3 class="font-mono text-white" style="font-size: 1.15rem; margin-bottom: 14px;">2. Marker-Delimited Payload Wrapping</h3>
+          <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 0.95rem;">
+            To isolate database strings from surrounding HTML markup, payloads inject strict boundary markers <code class="font-mono">[SQLI_START]</code> and <code class="font-mono">[SQLI_END]</code> into target columns.
+          </p>
+
+          <h3 class="font-mono text-white" style="font-size: 1.15rem; margin-bottom: 14px;">3. Memory-Safe Chunked Pagination</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">
+            Row dumps are requested in chunks of 50 records (<code class="font-mono">LIMIT 50 OFFSET N</code>) using <code class="font-mono">GROUP_CONCAT</code> / <code class="font-mono">STRING_AGG</code>, capping table loops at 500 rows to ensure zero memory exhaustion.
+          </p>
+        </div>
+
+        <div class="code-box">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.75rem; color: #52525b;">
+            <span>KOTLIN EXTRACTION ENGINE SAMPLE</span>
+            <span>ResponseAnalyzer.kt</span>
+          </div>
+          <pre><code><span class="cm">// Marker-Delimited Union Payload Builder</span>
+<span class="kw">private fun</span> <span class="fn">buildUnionPayload</span>(colCount: <span class="kw">Int</span>, targetExpr: <span class="kw">String</span>): <span class="kw">String</span> {
+    <span class="kw">val</span> cols = Array(colCount) { i ->
+        <span class="kw">if</span> (i == 0) targetExpr <span class="kw">else</span> <span class="str">"${i + 1}"</span>
+    }
+    <span class="kw">return</span> <span class="str">"' UNION SELECT ${cols.joinToString(",")}-- -"</span>
+}
+
+<span class="cm">// Database Name Extraction Payload (MySQL)</span>
+<span class="kw">val</span> expr = <span class="str">"CONCAT('[SQLI_START]', database(), '[SQLI_END]')"</span>
+
+<span class="cm">// Schema Discovery Payload</span>
+<span class="kw">val</span> schemaExpr = <span class="str">"CONCAT('[SQLI_START]', GROUP_CONCAT(CONCAT(table_name,'::',column_name) SEPARATOR '|||'), '[SQLI_END]') FROM information_schema.columns WHERE table_schema=database()"</span></code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supported Database Matrix -->
+  <section class="section" id="databases">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">COMPATIBILITY MATRIX</span>
+        <h2 class="section-title">Supported Database Engines</h2>
+        <p class="section-desc">
+          sahikosql includes tailored payload dialects for all major SQL database management engines.
+        </p>
+      </div>
+
+      <div class="db-grid">
+        <div class="db-card">
+          <span class="db-tag">ENGINE // 01</span>
+          <div class="db-name">MySQL / MariaDB</div>
+          <div class="db-status">Fully Supported</div>
+          <p style="font-size: 0.8rem; color: var(--text-dim); margin-top: 8px;">CONCAT & GROUP_CONCAT SEPARATOR dialect</p>
+        </div>
+
+        <div class="db-card">
+          <span class="db-tag">ENGINE // 02</span>
+          <div class="db-name">PostgreSQL</div>
+          <div class="db-status">Fully Supported</div>
+          <p style="font-size: 0.8rem; color: var(--text-dim); margin-top: 8px;">String concatenation (||) & STRING_AGG dialect</p>
+        </div>
+
+        <div class="db-card">
+          <span class="db-tag">ENGINE // 03</span>
+          <div class="db-name">SQLite</div>
+          <div class="db-status">Fully Supported</div>
+          <p style="font-size: 0.8rem; color: var(--text-dim); margin-top: 8px;">sqlite_master & GROUP_CONCAT dialect</p>
+        </div>
+
+        <div class="db-card">
+          <span class="db-tag">ENGINE // 04</span>
+          <div class="db-name">MS SQL Server</div>
+          <div class="db-status">Fully Supported</div>
+          <p style="font-size: 0.8rem; color: var(--text-dim); margin-top: 8px;">FOR XML PATH & STRING_AGG OFFSET FETCH dialect</p>
+        </div>
+
+        <div class="db-card">
+          <span class="db-tag">ENGINE // 05</span>
+          <div class="db-name">Oracle Database</div>
+          <div class="db-status">Signature Detection</div>
+          <p style="font-size: 0.8rem; color: var(--text-dim); margin-top: 8px;">all_tab_columns & LISTAGG dialect</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Release Center Section -->
+  <section class="section" id="download">
+    <div class="container">
+      <div class="download-card">
+        <h2 class="section-title text-gradient" style="margin-bottom: 16px;">Download sahikosql v1.0.0</h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">
+          Get the official release build APK package for Android. Fast, standalone build ready for immediate installation.
+        </p>
+
+        <!-- Meta Table -->
+        <table class="download-meta-table">
+          <tr>
+            <td>Package Name</td>
+            <td>com.whitehacklabs.securityscanner</td>
+          </tr>
+          <tr>
+            <td>Release Artifact</td>
+            <td>sahikosql-v1.0.0-release.apk</td>
+          </tr>
+          <tr>
+            <td>File Size</td>
+            <td>5.0 MB (5,162,501 bytes)</td>
+          </tr>
+          <tr>
+            <td>Target Android SDK</td>
+            <td>API Level 34 (Android 14)</td>
+          </tr>
+          <tr>
+            <td>Min Android SDK</td>
+            <td>API Level 24 (Android 7.0+)</td>
+          </tr>
+          <tr>
+            <td>SHA-256 Checksum</td>
+            <td style="font-family: var(--font-mono); font-size: 0.75rem; word-break: break-all;" id="shaHashCell">
+              0fa53f6a5f3c176bb51960cf665397e5dcb000ff16ac6cb4fcd87bee5d7d87f3
+            </td>
+          </tr>
+        </table>
+
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="sahikosql-v1.0.0-release.apk" download="sahikosql-v1.0.0-release.apk" class="btn btn-white btn-download-apk" style="font-size: 1.05rem; padding: 14px 32px;" id="mainDownloadBtn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>DOWNLOAD RELEASE BUILD (.APK)</span>
+          </a>
+
+          <button class="btn btn-glass btn-copy" data-copy-text="0fa53f6a5f3c176bb51960cf665397e5dcb000ff16ac6cb4fcd87bee5d7d87f3">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <span>Copy SHA-256 Hash</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FREQUENTLY ASKED QUESTIONS</span>
+        <h2 class="section-title">Everything You Need to Know</h2>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item active">
+          <div class="faq-question">
+            <span>How do I install the APK on Android?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Download the <code class="font-mono">sahikosql-v1.0.0-release.apk</code> file to your Android device. Open Settings &gt; Security, enable "Install apps from unknown sources" or grant permission to your file manager, then tap the APK file to install.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Is root access required on the Android device?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            No root access is required. sahikosql runs completely in user space on standard non-rooted Android devices running Android 7.0 (API Level 24) or higher.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Does sahikosql store or transmit my audit logs externally?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            No. All crawling, payload testing, log streaming, and database dump parsing occur strictly locally on your Android device. No scan data or credentials are ever sent to external cloud servers.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What happens if the target database table has hundreds of columns or rows?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            The extraction engine employs safe chunked pagination (<code class="font-mono">LIMIT 50 OFFSET N</code>) and full-screen dual-axis scrollable matrix tables to render large databases smoothly without causing app memory crashes.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 16px;">
+            <img src="assets/logo.svg" alt="SAHIKOSQL Logo" class="brand-app-icon">
+            <span class="brand-name">SAHIKOSQL</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 400px;">
+            Professional Android SQL injection vulnerability scanning and database extraction engine designed for authorized cybersecurity research.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-white" style="font-size: 0.85rem; margin-bottom: 16px;">COMPANY & RESOURCES</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem;">
+            <li><a href="https://sahiko.pages.dev" target="_blank" rel="noopener noreferrer" style="color: var(--text-muted); text-decoration: none;">Sahiko Innovation Lab</a></li>
+            <li><a href="#features" style="color: var(--text-muted); text-decoration: none;">Features</a></li>
+            <li><a href="#simulator" style="color: var(--text-muted); text-decoration: none;">Live Simulator</a></li>
+            <li><a href="#architecture" style="color: var(--text-muted); text-decoration: none;">Payload Engine</a></li>
+            <li><a href="#download" style="color: var(--text-muted); text-decoration: none;">Download APK</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-mono text-white" style="font-size: 0.85rem; margin-bottom: 16px;">LEGAL & COMPLIANCE</h4>
+          <p style="font-size: 0.8rem; color: var(--text-dim); line-height: 1.5;">
+            Usage of sahikosql for testing target web applications without explicit prior permission from the target system owner is illegal. Users assume full responsibility.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 <a href="https://sahiko.pages.dev" target="_blank" rel="noopener noreferrer" style="color: #ffffff; text-decoration: underline;">Sahiko Innovation Lab</a>. All rights reserved. Distributed under the MIT License.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>
